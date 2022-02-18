@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\itra\\ASP.Net-MVC-application\\web-app3\\web-app3.csproj",
+      "projectUniqueName": "D:\\ASPTask\\web-app3\\web-app3.csproj",
       "projectName": "web-app3",
-      "projectPath": "D:\\itra\\ASP.Net-MVC-application\\web-app3\\web-app3.csproj",
+      "projectPath": "D:\\ASPTask\\web-app3\\web-app3.csproj",
       "packagesPath": "C:\\Users\\UserHome\\.nuget\\packages\\",
-      "outputPath": "D:\\itra\\ASP.Net-MVC-application\\web-app3\\obj\\",
+      "outputPath": "D:\\ASPTask\\web-app3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UserHome\\AppData\\Roaming\\NuGet\\NuGet.Config",
