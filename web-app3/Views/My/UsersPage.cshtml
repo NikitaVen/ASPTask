@@ -1,0 +1,74 @@
+﻿@model EnablingUsers
+
+
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByClassName('checkbox_user');
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+    }
+    function toggle_unit(source) {
+        checkbox = document.getElementById('selectall');
+        if (checkbox.checked) {
+            checkbox.checked = false;
+        }
+        
+    }
+</script> 
+<div class="row">
+        @using (Html.BeginForm(new { @class = "users-table col-md-6" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row tools" style="margin-bottom: 50px">
+                <h2 class="col-md-7" style="color: orange">Users page</h2>
+                <div class="btn-group col-md-5" role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-secondary bi bi-trash" name="delete" formmethod="post" formaction="Delete"></button>
+                    <button type="submit" class="btn btn-secondary bi bi-lock" name="Block" formmethod="post" formaction="Block"></button>
+                    <button type="submit" class="btn btn-secondary bi bi-unlock" name="unblock" formmethod="post" formaction="Unblock"></button>
+                </div>
+            </div>
+            <table class="table">
+                <thead style="background-color: orange">
+                    <tr>
+                        <th scope="col">
+                            <input class="form-check-input" type="checkbox" onClick="toggle(this)" id="selectall">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Select all
+                            </label>
+                        </th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Registration date</th>
+                        <th scope="col">Last login date</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        for (int i = 0; i < Model._IDs.Count; ++i)
+                        {
+                                        <tr>
+                                            <th scope="col">
+                                                @Html.CheckBoxFor(m => Model._Checkboxes[i], new Dictionary<string, object>{
+                                               {"class" , "checkbox_user" }, 
+                                               { "onclick", "toggle_unit(this)" }
+                                           })
+                                                @*@Html.EditorFor(x => x._Checkboxes[i])*@
+                                                @*<input class="form-check-input checkbox_user" name="user" type="checkbox" onClick="toggle_unit(this)">*@
+                                            </th>
+                                            <th scope="col">@ViewBag.Users[i].ID</th>
+                                            @Html.HiddenFor(x => x._IDs[i])
+                                            <th scope="col">@ViewBag.Users[i].Name</th>
+                                            <th scope="col">@ViewBag.Users[i].Email</th>
+                                            <th scope="col">@ViewBag.Users[i].RegistrationTime</th>
+                                            <th scope="col">@ViewBag.Users[i].LastLoginTime</th>
+                                            <th scope="col">@ViewBag.Users[i].Status</th>
+                                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        }
+</div>

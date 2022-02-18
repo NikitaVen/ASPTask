@@ -1,0 +1,23 @@
+﻿@model LoginModel
+    <title>Authentication form</title>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <form style="max-width: 400px" asp-action="Login" asp-controller="My" asp-antiforgery="true" class="authentication-form col-md-4" style="padding-bottom: 30px">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <div>
+                <div class="form-group">
+                    <h2>Login</h2>
+                    <label asp-for="Email">Email address</label>
+                    <input type="email" class="form-control" asp-for="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <span asp-validation-for="Email" />
+                    <small class="form-text text-muted">Your email will be seen by other users.</small>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+                    <span asp-validation-for="Password" />
+                </div>
+                <input type="submit" class="btn btn-primary authentication-button" value="Sign In" />
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]nizier</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" href="~/favicon.ico" type="image/ico" />
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="bar-link"> @Html.ActionLink("Logout", "Logout", "My", new { area = "" }, new { @class = "navbar-brand" })</div>
+        <div  class="bar-link"> @Html.ActionLink("Registration", "Register", "My", new { area = "" }, new { @class = "navbar-brand" })</div>
+        <div  class="bar-link"> @Html.ActionLink("Login", "Login", "My", new { area = "" }, new { @class = "navbar-brand" })</div>
+        <div  class="bar-link"> @Html.ActionLink("Users", "UsersPage", "My", new { area = "" }, new { @class = "navbar-brand" })</div>
+    </div>
+    <div class="container" data-mdb-perfect-scrollbar='true' style="padding-top: 30px">
+        @RenderBody()
+        <footer style="padding-top: 70px">
+            <h5 class="nameapp">Registration and authentication WEB-application - 2022 Nizier</h5><h6 style="margin-bottom: 30px">Task 3 for  <a href="https://itransition.by/" target="_blank" class="itralink">Itransition</a></h6>
+        </footer>
+    </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

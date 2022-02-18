@@ -1,0 +1,185 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+.navbar-fixed-top {
+    background-color: orangered;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+    .navbar-brand:hover {
+        color: yellow;
+    }
+
+
+
+.top-link {
+    margin-left: 20px;
+}
+
+form {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.registration-form {
+    background-image: linear-gradient(to right, red, orange);
+}
+
+.authentication-form {
+    background-image: linear-gradient(to right, orange, yellow);
+}
+
+.registration-button, .authentication-button:hover {
+    border-color: orange;
+    background-color: orange;
+}
+
+    .registration-button:hover, .authentication-button {
+        background-color: red;
+        border-color: red;
+    }
+
+
+.itralink {
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: darkorange;
+}
+
+#emailHelp {
+    color: black;
+}
+
+.itralink:hover {
+    color: red;
+}
+
+.nameapp {
+    margin-top: 50px;
+}
+
+.tools {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: orange;
+    border-color: orangered;
+}
+
+    .btn:hover, .btn:active {
+        background-color: orangered;
+        border-color: orangered;
+    }
+  
+.bar-link{
+    color: yellow
+}
+
+.bar-link:hover {
+    color: red
+}
+ footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table thead th {
+    position: relative;
+}
+
+.table td, .table th {
+    position: relative;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: 13px;
+    left: -3px;
+}
+
+.body-content{
+    padding-top: 30px;
+}
+thread {
+    background-color: orange;
+}
